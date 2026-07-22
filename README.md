@@ -175,3 +175,21 @@ DR/BDR не переизбираются при появлении новых м
 Какой командой узнать список интерфейсов, на которых активирован OSPF?
 Какой командой перезапустить процесс OSPF?
 Приложите список сделанных команд.
+
+# ОТВЕТ:
+
+СВОДНАЯ ТАБЛИЦА ВСЕХ КОМАНД
+
+№	Что нужно узнать	Команда	Пример вывода \
+1	Router ID	show ip ospf	Routing Process "ospf 1" with ID 1.1.1.1 \
+2	Router ID	show ip protocols	Router ID 1.1.1.1 \
+3	Анонсированные сети	show ip ospf interface brief	Список интерфейсов с IP и Area \
+4	Анонсированные сети	show ip ospf | include Routing for Networks	1.1.1.0 0.0.0.255 area 0 \
+5	Список соседей	show ip ospf neighbor	2.2.2.2 1 FULL/BDR 00:00:35 \
+6	Информация о соседе	show ip ospf neighbor 2.2.2.2	Детальный вывод о соседе \
+7	Интерфейсы с OSPF	show ip ospf interface	Детальная информация по интерфейсам \
+8	Интерфейсы с OSPF (кратко)	show ip ospf interface brief	Краткий список интерфейсов \
+9	Перезапуск OSPF	clear ip ospf process	Перезапуск процесса OSPF \
+10	Информация о DR/BDR	show ip ospf interface fa0/0	State DR, Designated Router (ID) \
+11	База данных OSPF	show ip ospf database	Список всех LSA \
+12	Статистика OSPF	show ip ospf statistics	Статистика SPF и LSA

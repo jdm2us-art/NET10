@@ -37,6 +37,14 @@ O    192.168.4.0/24 [110/2] via 192.168.1.4, 11:45:42, FastEthernet0/0 \
 O       192.168.40.4 [110/2] via 192.168.1.4, 11:45:42, FastEthernet0/0 \
 C    209.45.185.0/24 is directly connected, FastEthernet0/1
 
+Проверка LOOPBACK
+
+ping 2.2.2.2 
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 2.2.2.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 0/0/0 ms
 
 # Задание 2. Проверка построения соседства
 
@@ -46,14 +54,7 @@ C    209.45.185.0/24 is directly connected, FastEthernet0/1
 В данных пакетах OSPF найти поле AreaID. В каких пакетах передается AreaID? В каком формате передается? \
 Выполните необходимую конфигурацию и приведите ответы на вопросы в свободной форме.
 
-Проверка LOOPBACK
 
-ping 2.2.2.2 
-
-Type escape sequence to abort.
-Sending 5, 100-byte ICMP Echos to 2.2.2.2, timeout is 2 seconds:
-!!!!!
-Success rate is 100 percent (5/5), round-trip min/avg/max = 0/0/0 ms
 
 # Задание 3. Оповещение соседей о потерянном маршруте
 

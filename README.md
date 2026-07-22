@@ -9,9 +9,34 @@
 
 # Ответ:
 
-show ip route ospf
+show ip route ospf | include O
+
+O       2.2.2.2 [110/2] via 192.168.1.2, 12:14:31, FastEthernet0/0 \
+O       3.3.3.3 [110/2] via 192.168.1.3, 12:14:31, FastEthernet0/0 \
+O       172.16.1.0 [110/2] via 192.168.1.2, 12:14:31, FastEthernet0/0 \
+O    192.168.3.0 [110/2] via 192.168.1.3, 12:14:31, FastEthernet0/0 \
+O    192.168.4.0 [110/2] via 192.168.1.4, 11:44:50, FastEthernet0/0 \
+O       192.168.40.4 [110/2] via 192.168.1.4, 11:44:50, FastEthernet0/0
 
 show ip route
+
+Gateway of last resort is not set
+
+     1.0.0.0/24 is subnetted, 1 subnets \
+C       1.1.1.0 is directly connected, Loopback0 \
+     2.0.0.0/32 is subnetted, 1 subnets \
+O       2.2.2.2 [110/2] via 192.168.1.2, 12:15:23, FastEthernet0/0 \
+     3.0.0.0/32 is subnetted, 1 subnets \
+O       3.3.3.3 [110/2] via 192.168.1.3, 12:15:23, FastEthernet0/0 \
+     172.16.0.0/24 is subnetted, 1 subnets \
+O       172.16.1.0 [110/2] via 192.168.1.2, 12:15:23, FastEthernet0/0 \
+C    192.168.1.0/24 is directly connected, FastEthernet0/0 \
+O    192.168.3.0/24 [110/2] via 192.168.1.3, 12:15:23, FastEthernet0/0 \
+O    192.168.4.0/24 [110/2] via 192.168.1.4, 11:45:42, FastEthernet0/0 \
+     192.168.40.0/32 is subnetted, 1 subnets \
+O       192.168.40.4 [110/2] via 192.168.1.4, 11:45:42, FastEthernet0/0 \
+C    209.45.185.0/24 is directly connected, FastEthernet0/1
+
 
 # Задание 2. Проверка построения соседства
 
@@ -20,6 +45,15 @@ show ip route
 Включите интерфейс и посмотрите процесс установления соседства на пакетном уровне. \
 В данных пакетах OSPF найти поле AreaID. В каких пакетах передается AreaID? В каком формате передается? \
 Выполните необходимую конфигурацию и приведите ответы на вопросы в свободной форме.
+
+Проверка LOOPBACK
+
+ping 2.2.2.2 
+
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 2.2.2.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 0/0/0 ms
 
 # Задание 3. Оповещение соседей о потерянном маршруте
 
